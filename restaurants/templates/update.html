@@ -5,6 +5,14 @@
         <title>Update</title>
     </head>
     <body>
-
+    	<form method="POST" action ="{% url 'restaurant-update' id %}">
+    		{%csrf_token %}
+    		{{form}}
+    		<button>Update</button>
+    	</form>
+<!--     	{% for restaurant in restaurants %}
+    	<p><a href = "{% url 'restaurant-update' restaurant.id %}"> {{restauarant.name}}</a></p>
+    	
+ -->
     </body>
 </html>
